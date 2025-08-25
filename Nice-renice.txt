@@ -25,3 +25,39 @@ Start a script with nice value 10:
  Let's Create script
  
 Script to be written in WSL
+mkdir developers
+cd developers
+nano myscript.sh
+----------------------------
+#! /bin/bash
+echo "Start My Script with Priority $(nice)"
+sleep 100 ## Just wait for 100 seconds
+echo "Script Completed Successfully"
+
+to save --> ctrl+O and then press enter 
+then --> ctrl + X
+
+check the content written: 
+cat myscript.sh
+
+to start a script with default priority:
+sh myscript.sh & (& to run it in background)
+to exit: ctrl+c (but still your process must be running)
+
+to check the nice value: jobs -l (to see process id)
+
+then: top -p process-id (top -p 1250)
+you can see the nice and priority values
+
+once the the process Completed ctrl+c
+
+run it again with nice: nice -n -10 sh myscript.sh &
+(ctrl+c) check proces id and then check priority values.
+
+again you can check: top -p process-id
+(you can see the priority 30)
+
+now to update priority you can use renice:
+sudo renice -10 proces-id 
+
+top -p proces-id (priority must be updated)

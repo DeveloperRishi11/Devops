@@ -61,3 +61,4 @@ now to update priority you can use renice:
 sudo renice -10 proces-id 
 
 top -p proces-id (priority must be updated)
+end

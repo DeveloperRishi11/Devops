@@ -44,3 +44,5 @@ top -b -n 1 | head -20
 
 Disk Usage:
 sudo du -ah /var | sort -rh | head -20
+
+next is nice and renice

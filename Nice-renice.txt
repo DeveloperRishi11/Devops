@@ -62,3 +62,4 @@ sudo renice -10 proces-id
 
 top -p proces-id (priority must be updated)
 end
+next code in another folder(git bash)
